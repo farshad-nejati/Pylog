@@ -1,0 +1,20 @@
+/*
+Add all style in this file
+global style sets in style.css
+*/
+
+@import url('CSS/style.css');
+@import url('CSS/toolbar.css');
+@import url('CSS/add-news.css');
+@import url('CSS/navigation.css');
+@import url('CSS/top-header.css');
+@import url('CSS/card-styles.css');
+@import url('CSS/footer.css');
+@import url('CSS/holy-grail.css');
+@import url('CSS/post.css');
+@import url('CSS/sidebar.css');
+@import url('CSS/login.css');
+@import url('CSS/profile.css');
+@import url('CSS/course.css');
+@import url('CSS/users.css');
+/* @import url('CSS/tab1.css'); */

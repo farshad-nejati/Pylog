@@ -1,0 +1,102 @@
+@font-face {
+    font-family: 'Jalal';
+    src: url('fonts/Jalal.eot') format('eot'),  
+         url('fonts/Jalal.woff') format('woff'),
+         url('fonts/Jalal.ttf') format('truetype');
+    font-style:normal;
+    font-weight:normal;
+  }
+
+  @font-face {
+    font-family: 'Yekan';
+    src: url('fonts/Yekan.eot') format('eot'),  
+         url('fonts/Yekan.woff') format('woff'),
+         url('fonts/Yekan.ttf') format('truetype');
+    font-style:normal;
+    font-weight:normal;
+  }
+  
+@font-face {
+    font-family: 'iransans';
+    src: url('fonts/iransans.eot') format('eot'),  
+        url('fonts/iransans.woff') format('woff'),
+        url('fonts/iransans.ttf') format('truetype');
+    font-style:normal;
+    font-weight:normal;
+}
+
+
+@font-face {
+    font-family: 'iransans';
+    src: url('fonts/iransans.ttf') format('truetype');
+    font-style:normal;
+    font-weight:normal;
+    }
+
+
+@font-face {
+font-family: 'Bardiya';
+src: url('fonts/Bardiya.eot') format('eot'),  
+        url('fonts/Bardiya.woff') format('woff'),
+        url('fonts/Bardiya.ttf') format('truetype');
+font-style:normal;
+font-weight:normal;
+}
+
+
+@font-face {
+    font-family: 'Homa';
+    src: url('fonts/Homa.eot') format('eot'),  
+            url('fonts/Homa.woff') format('woff'),
+            url('fonts/Homa.ttf') format('truetype');
+    font-style:normal;
+    font-weight:normal;
+    }
+    
+    @font-face {
+    font-family: 'iransans';
+    src: url('fonts/iransans.eot') format('eot'),  
+            url('fonts/iransans.woff') format('woff'),
+            url('fonts/iransans.ttf') format('truetype');
+    font-style:normal;
+    font-weight:normal;
+    }
+
+
+    @font-face {
+    font-family: 'iransans';
+    src: url('fonts/iransans.eot') format('eot'),  
+            url('fonts/iransans.woff') format('woff'),
+            url('fonts/iransans.ttf') format('truetype');
+    font-style:normal;
+    font-weight:normal;
+    }
+
+body {
+    margin: 0;
+    font-family: 'Yekan';
+    background-color: hsla(114, 100%, 47%, 0.02);
+}
+
+li {
+    padding:  0px;
+    margin: 0px;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;    
+}
+
+a:hover, a:visited, a:link, a:active {
+    text-decoration: none;
+    text-decoration-style: none;
+}
+
+a { color: inherit; } 
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}

@@ -1,0 +1,119 @@
+
+.login {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.registration {
+    width: 100%;
+}
+
+.registration p {
+    direction: rtl;
+}
+
+.registration input {
+    border: 1px solid #d8d9d8;
+    color: #999;
+    margin: 6px 0 0 0;
+    width: calc(100% - 1em);
+    height: 3em;
+    padding-right: 1em;
+    font-family: inherit;
+    line-height: 40px;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 1px;
+}
+
+.registration input:focus {
+    
+}
+
+.registration .submit-button {
+    border: 0;
+    width: 100%;
+    line-height: 30px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 16px;
+    background-color: #1d8360;
+    color: white;
+}
+
+.registration .submit-button:hover {
+    background-color: #076b49;
+}
+
+.registration input:focus {
+    border-color: #1d8360;
+    outline: 0;
+    box-sizing: #1d8360;
+    transition: all .3s ease;
+
+}
+
+.login .link-bottom {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center;
+    text-transform: none;
+    margin: 10px 0 0;
+}
+
+.login .link-bottom a{
+    color: #1d8360;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: center;
+    text-transform: none;
+    margin: 10px 0 0;
+}
+
+.login .link-bottom a:hover{
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+@media screen and (min-width: 40em) {
+
+    .login-panel {
+        /*height: 83vh;*/
+        /*margin-bottom: 8em;*/
+    }
+
+    .login {
+        margin-bottom: 0;
+        /*height: 49%;*/
+    }
+
+    .registration {
+        width: 75%;
+    }
+
+}
+
+
+@media screen and (min-width: 60em) {
+    .registration {
+        width: 50%;
+    }
+}
+/*.login-panel {*/
+    /*margin: 4em 6em 0em;*/
+    /*transition: margin 0.2s ease;*/
+/*}*/
+
+/*@media screen and (min-width: 40em) {*/
+    /*.login-panel {*/
+        /*flex: 1 1 auto;*/
+        /*order: 1;*/
+        /*margin: 4em 2em 0em;*/
+        /*transition: margin 0.2s ease;*/
+    /*}*/
+/*}*/
+

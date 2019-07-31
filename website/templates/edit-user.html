@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block title %}
+    <h1 class=" header-content">{{page_title}}</h1>
+{% endblock %}
+
+{% block site_content %}
+
+    <div class="user-profile-setting">
+            <form method="post">
+                <ul class=" form-field-wrap">
+                    <li class=" form-field">
+                        <label class=" form-field-label">Password</label>
+                        <div class=" form-field-input">
+                            <input type="text" name="passwrd" id="user_password" value="" class="regular-text user_password">
+                        </div>
+                    </li>
+                    <li class=" form-field">
+                        <label class=" form-field-label">Status</label>
+                        <div class=" form-field-input">
+                            <input type="text" name="status" id="user_status" value="{{ user.status }}" class="regular-text user_status">
+                        </div>
+                    </li>
+                    <li class=" form-field">
+                    <label class=" form-field-label">User Role</label>
+                    <span class=" form-field-input user_role" name="user_role">
+                        <select class="regular-text" id="user_role">
+                            {% for role in users_role %}
+                                {{ user.user_role }}
+                                <option  class="reqular-text" {% if user.user_role == role %} selected {% endif %}>{{ role }}</option>
+                            {% endfor %}
+                        </select>
+{#                        <input type="text" name="role" id="user_role" value="{{ user.user_role }}" class="regular-text">#}
+                    </span>
+                    </li>
+                </ul>
+                <input type="hidden" name="user_id"  id="user_id" class="user_id" value="{{ user.id }}">
+
+                <input type="button" id="submit-btn" class="submit-btn" value="Update2" >
+            </form>
+    </div>
+
+{#    <script>#}
+{#        function my_function() {#}
+{#            console.log("form submit shod!!");#}
+{#            let user_id = document.getElementById('user_id').value;#}
+{#            let user_pass = document.getElementById('user_password').value;#}
+{#            let user_role = document.getElementById('user_role').value;#}
+{#            let user_status = document.getElementById('user_status').value;#}
+{#            let data = `pass=${user_pass}&status=${user_status}&role=${user_role}`;#}
+{#            let xhr = new XMLHttpRequest();#}
+{#            xhr.open('PUT', '/api/v1/user/' + user_id);#}
+{#            xhr.onreadystatechange = () => {#}
+{#                if (xhr.readyState === 4 && xhr.status === 200) {#}
+{#                    console.log('response received');#}
+{#                    // ul.innerHTML = '';#}
+{#                }#}
+{#            };#}
+{#            xhr.send(data);#}
+{#            console.log('request sent');#}
+{#        }#}
+{#    </script>#}
+
+{% endblock %}
+
+{% block sidebar %}
+{% endblock %}
+
+{% block sidebar_switcher %}
+{% endblock %}

@@ -1,0 +1,271 @@
+
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('fonts/Roboto-Medium.eot') format('eot'),  
+            url('fonts/Roboto-Medium.woff') format('woff'),
+            url('fonts/Roboto-Medium.ttf') format('truetype');
+    font-style:normal;
+    font-weight:normal;
+}
+
+.course-page {
+    margin: 0 2em;
+    transition: all 0.2s ease;
+    flex: 1 1 auto;
+    order: 1;
+}
+
+.course-title {
+    margin: 2em 0 1em;
+}
+
+.course-header {
+    /* margin: 2em 0; */
+}
+
+.course-preview {
+    margin: 1em 0 2em;
+}
+
+.course-content {
+    margin: 2em 0;
+}
+
+
+.course-preview img {
+    width: 100%;
+}
+
+.course-dscription-block {
+    padding: 0 2em;
+}
+
+.course-dscription {
+    padding: 0 1em;
+}
+
+.course-dscription h4 {
+    font-size: 18px;
+    line-height: 1.6em;
+}
+
+.course-dscription p {
+    color: #666;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.7em;
+}
+
+.course-dscription ul {
+    color: #666;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.7em;
+    padding: 1em;
+}
+
+.course-dscription li {
+    list-style: circle;
+}
+
+.course-info-block {
+    padding: 0 1em;
+}
+
+.course-info {
+
+}
+
+.course-header {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    /* margin: -2px 20px 10px 20px; */
+}
+
+.course-author-header {
+    display: flex;
+    margin-right: 1em;
+}
+
+.course-author-header label, .course-categories label , .course-years label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #ccc;
+    margin-bottom: 0;
+}
+
+.course-author-header img {
+    margin-right: .5em;
+}
+
+.course-value-header a {
+    padding: 3px 1px 3px 3px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 10px;
+    display: inline-block;
+    color: #7a7a7a;
+}
+
+.course-value-header a:hover {
+    color: #666;
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+.course-categories {
+    padding-left:  1em;
+    margin-right: 1em;
+    border-left: 1px solid #eee;
+}
+.course-years {
+    padding-left:  1em;
+    border-left: 1px solid #eee;
+}
+
+
+.course-info ul {
+    color: #666;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.7em;
+    padding: 1em 0;
+    max-width: 12em;
+}
+
+.course-info li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+    padding: 1em 0;
+}
+
+.course-info li i {
+    color: #1d8360;
+    margin-right: 1em;
+}
+
+.course-info .label {
+    font-size: 13px;
+    line-height: 25px;
+    flex: 1 0 auto;
+}
+
+.upload-homeworks {
+    display: flex;
+    flex-direction: column
+}
+
+.image-panel-homework {
+    display: flex;
+
+    margin: 1em;
+    height: 1em;
+    align-items: center;
+}
+
+.image-panel-homework label {
+    margin-right: 1em;
+}
+
+.upload-homework {
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+}
+
+.upload-homework input {
+    display: none;
+    overflow: hidden;
+}
+
+.upload-homework label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    color: #eee;
+    background-color: #1d8360;
+    cursor: pointer;
+    height: 1.5em;
+    text-align: center;
+    padding: 1em 1em;
+    box-shadow: 0px 0px 9px 0px rgba(95, 87, 87, 0.73);
+    width: 4em;
+
+}
+
+.upload-homework label:hover {
+    background-color: #076b49;
+    box-shadow: 0px 2px 5px 1px rgba(64, 59, 59, 0.73);
+}
+
+@media screen and (min-width: 40em) {
+    .course-page {
+        margin: 0 4em;
+        width: 100%;
+    }
+
+    .course-preview {
+        margin: 2em 0 4em;
+    }
+
+    .course-content {
+        display: flex;
+        margin: 4em 0;
+    }
+
+    .tab-section-course {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+    
+    .course-preview img {
+        width: 100%;
+    }
+
+    .course-info-block {
+        padding: 0 1em;
+        border-left: 1px solid #eee;
+    }
+
+    .course-dscription-block {
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 60em) {
+    
+    .course-page {
+        margin: 0 6em;
+    }
+
+    .course-preview {
+        margin: 3em 0 5em;
+    }
+
+    .course-content {
+        margin: 5em 0;
+    }
+    
+    .course-preview img {
+        width: 100%;
+    }
+    
+    .course-info-block {
+        padding: 0 3em;
+        border-left: 1px solid #eee;
+    }
+
+    .course-dscription-block {
+        display: flex;
+    }
+}

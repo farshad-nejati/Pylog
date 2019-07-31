@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}
+    <h1 class=" header-content">{{page_title}}</h1>
+{% endblock %}
+
+{% block site_content %}
+    <table class="table">
+        <tr>
+            <th>#</th>
+            <th>name</th>
+            <th>email</th>
+            <th>user role</th>
+            <th>create date</th>
+            <th class="empty"></th>
+        </tr>
+    {%  for user in users %}
+        <tr id="raw{{ user.id }}">
+            <td>{{ user.id }}</td>
+            <td>{{ user.username }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.user_role }}</td>
+            <td>{{ user.status }}</td>
+            <td>{{ user.create_at }}</td>
+            <td class="edit-buttons"><a class="edit" href="{{ url_for('user', id= user.id) }}">edit</a> <button class="delete" id="delete" value="{{ user.id }}">Delete</button></td>
+        </tr>
+    {% endfor %}
+
+    </table>
+
+
+{% endblock %}
+
+{% block sidebar %}
+{% endblock %}
+
+{% block sidebar_switcher %}
+{% endblock %}

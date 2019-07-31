@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+        <title>پایلاگ</title>
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="main.js"></script>
+    </head>
+    <body>
+{#     {{ current_user.user_role }}#}
+        <div class="outer-wrap">
+            <header>
+                <div class="toolbar">
+                    <div class="toolbar-info">
+                        <ul>
+                            <li>سوال داری؟</li>
+                            <li>
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                <span>(98) 9012833466</span>
+                            </li>
+                            <li>
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                <span>+nejati.farshad93@gmail.com</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="login-toolbar">
+                        <ul>
+                            {% if current_user.is_authenticated %}
+                                <li><a href={{ url_for('logout') }}>خروج</a></li>
+                                <li><a href={{ url_for('profile') }}>پروفایل</a></li>
+                            {% else %}
+                                <li><a href={{ url_for('signup') }}>ثبت نام</a></li>
+                                <li><a href={{ url_for('login') }}>ورود</a></li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+                <div class="navigation">
+                    <div class="main-menu">
+                        <ul>
+                            <li>
+                                <a href={{ url_for('home') }}>
+                                    <div class="button-text">خانه</div>
+                                    <!-- <div class="icon">
+                                        <i class="fa fa-home"></i>
+                                    </div> -->
+                                </a>
+                            </li>
+                            <li>
+                                <a href={{ url_for('index') }}>
+                                    <div class="button-text">وبلاگ</div>
+                                    <!-- <div class="icon">
+                                        <i class="fa fa-home"></i>
+                                    </div> -->
+                                </a>
+                            </li>
+                            <li>
+                                <a href={{ url_for('about') }}>
+                                    <div class="button-text">درباره ما</div>
+                                    <!-- <div class="icon">
+                                        <i class="fa fa-info-circle"></i>
+                                    </div> -->
+                                </a>
+                            </li>
+                            <li>
+                                <a href={{ url_for('course') }}>
+                                    <div class="button-text">درس ها</div>
+                                    <!-- <div class="icon">
+                                        <i class="fa fa-info-circle"></i>
+                                    </div> -->
+                                </a>
+                            </li>
+                            {% if current_user.is_authenticated and current_user.user_role == "admin" %}
+                            <li>
+                                <a href={{ url_for('add_news') }}>
+                                    <div class="button-text">خبر جدید</div>
+                                    <!-- <div class="icon">
+                                        <i class="fa fa-info-circle"></i>
+                                    </div> -->
+                                </a>
+                            </li>
+                            <li>
+                                <a href={{ url_for('users') }}>
+                                    <div class="button-text">ویرایش اعضا</div>
+                                    <!-- <div class="icon">
+                                        <i class="fa fa-info-circle"></i>
+                                    </div> -->
+                                </a>
+                            </li>
+                            {% endif %}
+                            <!-- <li>
+                                <a href="#">
+                                    <div class="icon">
+                                        <i class="fa fa-file-text"></i>
+                                    </div>
+                                    <div class="button-text">تماس با ما</div>
+                                </a>
+                            </li> -->
+                            <!-- <li><a href="#"><div class="icon"><i class="fa fa-file-text"></i></div><div class="button-text"></div></a></li> -->
+                        </ul>
+                    </div>
+                    <div class="logo-nav">
+                        <div class="logo-icon">
+                            <a href="#">
+                                <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <div class="logo-text">
+                            <a href={{ url_for('index') }}>پایلاگ</a>
+                        </div>  
+                            <!-- <ul>
+                                <li><a href="http://twitter.com"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                <li><a href="http://facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li><a href="http://linkedin.com"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                <li><a href="http://instagram.com"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                            </ul> -->
+                    </div>
+                </div>
+            </header>
+            <div class="main-content">
+                <div class="top-header">
+                    <span class="overlay-top-header"></span>
+                    {% block title %}{% endblock %}
+                </div>
+                <div class="site-content">
+
+                        {% block site_content %}
+                        {% endblock %}
+
+                        {% block sidebar %}{% endblock %}
+
+                </div>
+            </div>
+            <footer class="footer">
+                <p>Copyright@2017, Farshad Nejati</p>
+            </footer>
+        </div>
+
+        {% block sidebar_switcher %}
+        {% endblock %}
+        <script type="text/javascript" src={{ url_for('static',  filename='JS/sidebar-switcher.js') }}></script>
+        <script type="text/javascript" src={{ url_for('static',  filename='main.js') }}></script>
+        <script type="text/javascript" src={{ url_for('static',  filename='main2.js') }}></script>
+    </body>
+</html>

@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block title %}
+    <h1 class=" header-content">{{page_title}}</h1>
+{% endblock %}
+
+{% block site_content %}
+    <section class="posts">
+        <article class="post">
+            <div class="post-wrapper">
+                <a href="#">
+                    <img class="post-image" src={{ url_for('static',  filename='images/'+post.image_url) }}>
+                </a>
+            </div>
+            <div class="post-content">
+                <header class="post-header">
+                    <div class="date-meta">
+                        <span>20</span>
+                        <i> تیر</i>
+                    </div>
+                    <div class="entry-contain">
+                        <h2 class="entry-title">
+                            <a href={{ url_for('post', post_id=post.id) }}>{{ post.title }}</a>
+                        </h2>
+                        <ul class="entry-meta">
+                            <li class="author">
+                                <span>نویسنده</span>
+                                <span>
+                                    <a href="#">
+                                        {{ post.author }}
+                                    </a>
+                                </span>
+                            </li>
+                            <li class="entry-category">
+                                <span>دسته بندی</span>
+                                <div class="entry-category-titles">
+                                    {% for key, value in post.category.items() %}
+                                        <a href={{ url_for('category', category_name=value) }}>
+                                                {{ value }}
+                                        </a>
+                                    {% endfor %}
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </header>
+                <div class="post-summery">
+                    <p>{{ post.content }}</p>
+                </div>
+            </div>
+        </article>
+    </section>
+{% endblock %}
+
+{% block sidebar %}
+    <div id="sidebar" class="sidebar">
+        <div id="search" class="widget_search">
+            <h3 class="search-widget-title">جستجو</h3>
+            <form role="search" method="get" class="search-form" action="#">
+                <label>
+                    <input type="search" class="search-field" placeholder="جستجو ..." value="" name="s">
+                </label>
+                <input type="submit" class="search-submit" value="">
+            </form>
+        </div>
+        <div class="squish-container">
+            <h3>دسته بندی ها</h3>
+            <nav class="sidebar-category">
+                <ul>
+
+                    {% for category in categories %}
+                    <li><a href={{ url_for('category', category_name=category[0]) }}>{{ category[0] }}</a></li>
+                    {% endfor %}
+                </ul>
+            </nav><!-- .example-menu -->
+        </div>
+    </div>
+{% endblock %}
+
+{% block sidebar_switcher %}
+    <div class="sidebar-switcher">
+            <div id="sidebar-switcher" class="icon-switcher"><i class="fa fa-exchange"></i></div></a>
+    </div>
+{% endblock %}

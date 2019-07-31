@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block title %}
+    <h1 class=" header-content">{{page_title}}</h1>
+{% endblock %}
+
+{% block site_content %}
+    <section class="posts">
+        <div class="login-panel">
+            <div class="login">
+                <h2>ورود</h2>
+                <form class="registration" method="post">
+                    <p>
+                        <input placeholder="نام کاربری" type="text" name="user_name" id="user_login" class="input">
+                    </p>
+    {#                                <p>#}
+    {#                                    <input placeholder="ایمیل" type="text" name="user_email" id="user_email" class="input">#}
+    {#                                </p>#}
+                    <p>
+                        <input placeholder="رمز عبور" type="password" name="user_password" id="user_password" class="input">
+                    <p class="submit">
+                        <input type="submit" name="submit" id="submit" class="submit-button" value="ورود">
+                    </p>
+                </form>
+
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block sidebar %}
+    <div id="sidebar" class="sidebar">
+        <div id="search" class="widget_search">
+            <h3 class="search-widget-title">جستجو</h3>
+            <form role="search" method="get" class="search-form" action="#"> 
+                <label>
+                    <input type="search" class="search-field" placeholder="جستجو ..." value="" name="s">
+                </label> 
+                <input type="submit" class="search-submit" value="">
+            </form>
+        </div>
+        <div class="squish-container">
+            <h3>دسته بندی ها</h3>
+            <nav class="sidebar-category">
+                <ul>
+
+                    {% for category in categories %}
+                    <li><a href={{ url_for('category', category_name=category[0]) }}>{{ category[0] }}</a></li>
+                    {% endfor %}
+                </ul>
+            </nav><!-- .example-menu -->
+        </div>
+    </div>
+{% endblock %}
+
+{% block sidebar_switcher %}
+    <div class="sidebar-switcher">
+            <div id="sidebar-switcher" class="icon-switcher"><i class="fa fa-exchange"></i></div></a>
+    </div>
+{% endblock %}

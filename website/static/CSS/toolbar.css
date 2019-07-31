@@ -1,0 +1,56 @@
+.toolbar {
+    background-color: hsla(0, 0%, 10%, 0.9);
+    color: hsla(0, 0%, 75%, 0.9);
+    margin: 0;
+}
+
+.toolbar-info{
+    display: flex;
+    align-items: center;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.toolbar-info ul {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.toolbar-info li {
+    padding: .5em .5em .5em 0.5em;
+    font-family: inherit;
+}
+
+.toolbar-info span {
+    color: white;
+    font-family: sans-serif;
+    font-size: 12px;
+    padding: 2px;
+}
+
+.login-toolbar li {
+    padding: 0.2em .5em;
+    font-size: 16px;
+}
+
+.login-toolbar li:hover {
+    color: white;
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+@media screen and (min-width: 30em) {
+    .toolbar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+    }
+    
+    .login-toolbar ul {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+}

@@ -1,0 +1,278 @@
+
+
+
+
+
+
+
+
+{% extends "base.html" %}
+
+{% block title %}
+    <h1 class=" header-content">{{page_title}}</h1>
+{% endblock %}
+
+{% block site_content %}
+    <div class="profile">
+        <div class="user-tab">
+            <div class="user-info">
+                <div class="author-avatar">
+                    <img alt="#" src="{{ url_for('static',  filename='images/profile/profile.jpg') }}" class="author-avatar-img">
+                </div>
+                <div class="user-information">
+                    <ul class="author-social">
+                        <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a></li>
+                        <li> <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                    <h3 class="author-name">Keny White</h3>
+                    <span></span>
+                    <p>Keny White is Professor of the Department of Computer Science at Boston University, where he has been since 2004. He also currently serves as Chief Scientist of Guavus, Inc. During 2003-2004 he was a Visiting Associate Professor at the Laboratoire d'Infomatique de Paris VI (LIP6). He received a B.S. from Cornell University in 1992, and an M.S. from the State University of New York at Buffalo.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <section class="tab-section">
+
+        <input class="tab" id="tab1" type="radio" name="grp" checked="checked"/>
+        <label class="tab-label" for="tab1"><i class="fa fa-book" aria-hidden="true"></i><span class="text">Courses</span></label>
+        <div class="tab-content">
+            <div class="course">
+                <div class="course-item">
+                    <div class="course-thumbnail">
+                        <a href="#" id="course-image" class="course-image">
+                            <img src="{{ url_for('static',  filename='images/course/1.jpg') }}" alt="#" title="course-4" width="400" height="250">
+                        </a>
+                        <a class="course-readmore" href="#">Read More</a>
+                    </div>
+                </div>
+                <div class="course-content">
+                    <div class="course-author">
+                        <img alt="#" src="{{ url_for('static',  filename='images/course/8.jpg') }}" class="avatar" height="40" width="40">
+                        <div class="author-contain">
+                            <div class="course-value" itemprop="name">
+                                <a href="#"> Keny White </a>
+                            </div>
+                        </div>
+                    </div>
+                    <h4 class="course-title">
+                        <a href="#" rel="bookmark">Introduction LearnPress – LMS plugin</a>
+                    </h4>
+                    <div class="course-color-set">
+                        <span></span>
+                    </div>
+                    <div class="course-meta">
+                        <div class="course-students">
+                            <!-- <label>Students</label> -->
+                            <div class="course-student course-value">
+                                <i class="fa fa-group"></i>
+                                637
+                            </div>
+                            <div class="course-comments-count">
+                                <div class="course-value">
+                                    <i class="fa fa-comment"></i>
+                                    3
+                                </div>
+                            </div>
+                        </div>
+                        <div class="course-price">
+                            <div class="course-value free-course"> Free</div>
+                            <meta itemprop="priceCurrency" content="$">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="course">
+                <div class="course-item">
+                    <div class="course-thumbnail">
+                        <a href="#" id="course-image" class="course-image">
+                            <img src="images/course/2.jpg" alt="#" title="course-4" width="400" height="250">
+                        </a>
+                        <a class="course-readmore" href="#">Read More</a>
+                    </div>
+                </div>
+                <div class="course-content">
+                    <div class="course-author">
+                        <img alt="#" src="images/course/8.jpg" class="avatar" height="40" width="40">
+                        <div class="author-contain">
+                            <div class="course-value" itemprop="name">
+                                <a href="#"> Keny White </a>
+                            </div>
+                        </div>
+                    </div>
+                    <h4 class="course-title">
+                        <a href="#" rel="bookmark">Introduction LearnPress – LMS plugin</a>
+                    </h4>
+                    <div class="course-color-set">
+                        <span></span>
+                    </div>
+                    <div class="course-meta">
+                        <div class="course-students">
+                            <!-- <label>Students</label> -->
+                            <div class="course-value">
+                                <i class="fa fa-group"></i>
+                                637
+                            </div>
+                            <div class="course-comments-count">
+                                <div class="course-value">
+                                    <i class="fa fa-comment"></i>
+                                    3
+                                </div>
+                            </div>
+                        </div>
+                        <div class="course-price">
+                            <div class="course-value free-course"> Free</div>
+                            <meta itemprop="priceCurrency" content="$">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="course">
+                <div class="course-item">
+                    <div class="course-thumbnail">
+                        <a href="#" id="course-image" class="course-image">
+                            <img src="images/course/3.jpg" alt="#" title="course-4" width="400" height="250">
+                        </a>
+                        <a class="course-readmore" href="#">Read More</a>
+                    </div>
+                </div>
+                <div class="course-content">
+                    <div class="course-author">
+                        <img alt="#" src="images/course/8.jpg" class="avatar" height="40" width="40">
+                        <div class="author-contain">
+                            <div class="course-value" itemprop="name">
+                                <a href="#"> Keny White </a>
+                            </div>
+                        </div>
+                    </div>
+                    <h4 class="course-title">
+                        <a href="#" rel="bookmark">Introduction LearnPress – LMS plugin</a>
+                    </h4>
+                    <div class="course-color-set">
+                        <span></span>
+                    </div>
+                    <div class="course-meta">
+                        <div class="course-students">
+                            <!-- <label>Students</label> -->
+                            <div class="course-value">
+                                <i class="fa fa-group"></i>
+                                637
+                            </div>
+                            <div class="course-comments-count">
+                                <div class="course-value">
+                                    <i class="fa fa-comment"></i>
+                                    3
+                                </div>
+                            </div>
+                        </div>
+                        <div class="course-price">
+                            <div class="course-value free-course"> Free</div>
+                            <meta itemprop="priceCurrency" content="$">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <input class="tab" id="tab2" type="radio" name="grp" />
+        <label class="tab-label" for="tab2"><span class="text">Instructor</span></label>
+        <div class="tab-content">
+                <div class="message message-success"><span>You haven't got any courses yet!</span></div>
+        </div>
+
+        <input class="tab" id="tab3" type="radio" name="grp" />
+        <label class="tab-label" for="tab3"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="text">Orders</span></label>
+        <div class="tab-content">
+            <div class="message message-success"><span>You haven't got any ordeer yet!</span></div>
+        </div>
+
+        <input class="tab" id="tab4" type="radio" name="grp" />
+        <label class="tab-label" for="tab4"><i class="fa fa-cog" aria-hidden="true"></i><span class="text">Setting</span></label>
+        <div class="tab-content">
+            <div class="user-profile-setting">
+                <ul class=" form-field-wrap">
+                    <li class=" form-field">
+                        <label class=" form-field-label">Biographical Info</label>
+                        <div class=" form-field-input">
+                            <p class="description">
+                                Share a little biographical information to fill out your profile. This may be shown publicly.
+                            </p>
+                            <textarea name="description" id="description" rows="5" cols="30"></textarea>
+                        </div>
+                    </li>
+                    <li class=" form-field">
+                        <label class=" form-field-label">First Name</label>
+                        <div class=" form-field-input">
+                            <input type="text" name="first_name" id="first_name" value="farshad" class="regular-text">
+                        </div>
+                    </li>
+                    <li class=" form-field">
+                        <label class=" form-field-label">Last Name</label>
+                        <div class=" form-field-input">
+                            <input type="text" name="last_name" id="last_name" value="nejati" class="regular-text">
+                        </div>
+                    </li>
+                    <li class=" form-field">
+                    <label class=" form-field-label">Nickname</label>
+                    <div class=" form-field-input">
+                        <input type="text" name="nickname" id="nickname" value="farshadnejati" class="regular-text">
+                    </div>
+                    </li>
+                    <li class=" form-field">
+                        <label class=" form-field-label">Facebook</label>
+                        <div class=" form-field-input">
+                            <input type="text" name="lp_info[facebook]" id="facebook" value="" class="regular-text">
+                        </div>
+                    </li>
+                    <li class=" form-field">
+                        <label class=" form-field-label">Twitter</label>
+                        <div class=" form-field-input">
+                            <input type="text" name="lp_info[twitter]" id="twitter" value="" class="regular-text">
+                        </div>
+                    </li>
+                    <li class=" form-field">
+                        <label class=" form-field-label">Google Plus</label>
+                        <div class=" form-field-input">
+                            <input type="text" name="lp_info[google]" id="google" value="" class="regular-text">
+                        </div>
+                    </li>
+                    <li class=" form-field">
+                        <label class=" form-field-label">LinkedIn</label>
+                        <div class=" form-field-input">
+                            <input type="text" name="lp_info[linkedin]" id="linkedin" value="" class="regular-text">
+                        </div>
+                    </li>
+                    <li class=" form-field">
+                        <label class=" form-field-label">Youtube</label>
+                        <div class=" form-field-input">
+                            <input type="text" name="lp_info[youtube]" id="youtube" value="" class="regular-text">
+                        </div>
+                    </li>
+                </ul>
+                <input type="hidden" name=" profile-section" value="basic-information">
+                <p class="update-profile">
+                    <input type="submit" name="submit" id="submit" class="" value="Update">
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+    </div>
+
+{% endblock %}
+
+{% block sidebar %}
+{% endblock %}
+
+{% block sidebar_switcher %}
+{% endblock %}
+
+
+
+
+
+
+
+

@@ -1,0 +1,445 @@
+{% extends "base.html" %}
+
+{% block title %}
+    <h1 class=" header-content">{{page_title}}</h1>
+{% endblock %}
+
+{% block site_content %}
+    <div class="courses-grid">
+        <div class="course-section">
+            <div class="course-top">
+                    <div class="course-index">
+                        <div class="switch-layout">
+                                <a class="switchToGrid">
+                                    <i class="fa fa-th-large"></i>
+                                </a>
+                                <a class="switchToList">
+                                    <i class="fa fa-list-ul"></i>
+                                </a>
+                            </div>
+                        <span>نمایش 1-5 از 20 </span>
+                    </div>
+                    <div class="search-course">
+                        <form role="search" method="post" class="search-form" action="#">
+                            <label>
+                                <input type="search" class="search-field" placeholder="جستجوی درس مورد نظر" value="" name="s">
+                            </label>
+                            <button type="submit" class="search-submit" value="" style=>
+                                <i class="fa fa-search" aria-hidden="true" ></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            <div class="course-grid">
+                    <div class="course">
+                        <div class="course-item">
+                            <div class="course-thumbnail">
+                                <a href="#" id="course-image" class="course-image">
+                                    <img src="{{ url_for('static',  filename='images/course/1.jpg') }}"  alt="#" title="course-4" width="400" height="250">
+                                </a>
+                                <a class="course-readmore" href="#">Read More</a>
+                            </div>
+                        </div>
+                        <div class="course-content">
+                            <div class="course-author">
+                                <img alt="#" src="{{ url_for('static',  filename='images/course/8.jpg') }}" class="avatar" height="40" width="40">
+                                <div class="author-contain">
+                                    <div class="course-value" itemprop="name">
+                                        <a href="#"> Keny White </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="course-title">
+                                <a href="#" rel="bookmark">Introduction LearnPress – LMS plugin</a>
+                            </h3>
+                            <div class="course-color-set">
+                                <span></span>
+                            </div>
+                            <div class="course-meta">
+                                <div class="course-students">
+                                    <!-- <label>Students</label> -->
+                                    <div class="course-student course-value">
+                                        <i class="fa fa-group"></i>
+                                        637
+                                    </div>
+                                    <div class="course-comments-count">
+                                        <div class="course-value">
+                                            <i class="fa fa-comment"></i>
+                                            3
+                                        </div>
+                      <h3></h3>              </div>
+                                </div>
+                                <div class="course-price">
+                                    <div class="course-value free-course"> Free</div>
+                                    <meta itemprop="priceCurrency" content="$">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course">
+                        <div class="course-item">
+                            <div class="course-thumbnail">
+                                <a href="#" id="course-image" class="course-image">
+                                    <img src="{{ url_for('static',  filename='images/course/2.jpg') }}" alt="#" title="course-4" width="400" height="250">
+                                </a>
+                                <a class="course-readmore" href="#">Read More</a>
+                            </div>
+                        </div>
+                        <div class="course-content">
+                            <div class="course-author">
+                                <img alt="#" src="{{ url_for('static',  filename='images/course/8.jpg') }}" class="avatar" height="40" width="40">
+                                <div class="author-contain">
+                                    <div class="course-value" itemprop="name">
+                                        <a href="#"> Keny White </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <h4 class="course-title">
+                                <a href="#" rel="bookmark">Introduction LearnPress – LMS plugin</a>
+                            </h4>
+                            <div class="course-color-set">
+                                <span></span>
+                            </div>
+                            <div class="course-meta">
+                                <div class="course-students">
+                                    <!-- <label>Students</label> -->
+                                    <div class="course-value">
+                                        <i class="fa fa-group"></i>
+                                        637
+                                    </div>
+                                    <div class="course-comments-count">
+                                        <div class="course-value">
+                                            <i class="fa fa-comment"></i>
+                                            3
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="course-price">
+                                    <div class="course-value free-course"> Free</div>
+                                    <meta itemprop="priceCurrency" content="$">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course">
+                        <div class="course-item">
+                            <div class="course-thumbnail">
+                                <a href="#" id="course-image" class="course-image">
+                                    <img src="{{ url_for('static',  filename='images/course/3.jpg') }}" alt="#" title="course-4" width="400" height="250">
+                                </a>
+                                <a class="course-readmore" href="#">Read More</a>
+                            </div>
+                        </div>
+                        <div class="course-content">
+                            <div class="course-author">
+                                <img alt="#" src="{{ url_for('static',  filename='images/course/8.jpg') }}" class="avatar" height="40" width="40">
+                                <div class="author-contain">
+                                    <div class="course-value" itemprop="name">
+                                        <a href="#"> Keny White </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <h4 class="course-title">
+                                <a href="#" rel="bookmark">Introduction LearnPress – LMS plugin</a>
+                            </h4>
+                            <div class="course-color-set">
+                                <span></span>
+                            </div>
+                            <div class="course-meta">
+                                <div class="course-students">
+                                    <!-- <label>Students</label> -->
+                                    <div class="course-value">
+                                        <i class="fa fa-group"></i>
+                                        637
+                                    </div>
+                                    <div class="course-comments-count">
+                                        <div class="course-value">
+                                            <i class="fa fa-comment"></i>
+                                            3
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="course-price">
+                                    <div class="course-value free-course"> Free</div>
+                                    <meta itemprop="priceCurrency" content="$">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course">
+                        <div class="course-item">
+                            <div class="course-thumbnail">
+                                <a href="#" id="course-image" class="course-image">
+                                    <img src="{{ url_for('static',  filename='images/course/4.jpg') }}" alt="#" title="course-4" width="400" height="250">
+                                </a>
+                                <a class="course-readmore" href="#">Read More</a>
+                            </div>
+                        </div>
+                        <div class="course-content">
+                            <div class="course-author">
+                                <img alt="#" src="{{ url_for('static',  filename='images/course/8.jpg') }}" class="avatar" height="40" width="40">
+                                <div class="author-contain">
+                                    <div class="course-value" itemprop="name">
+                                        <a href="#"> Keny White </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <h4 class="course-title">
+                                <a href="#" rel="bookmark">Introduction LearnPress – LMS plugin</a>
+                            </h4>
+                            <div class="course-color-set">
+                                <span></span>
+                            </div>
+                            <div class="course-meta">
+                                <div class="course-students">
+                                    <!-- <label>Students</label> -->
+                                    <div class="course-value">
+                                        <i class="fa fa-group"></i>
+                                        637
+                                    </div>
+                                    <div class="course-comments-count">
+                                        <div class="course-value">
+                                            <i class="fa fa-comment"></i>
+                                            3
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="course-price">
+                                    <div class="course-value free-course"> Free</div>
+                                    <meta itemprop="priceCurrency" content="$">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course">
+                        <div class="course-item">
+                            <div class="course-thumbnail">
+                                <a href="#" id="course-image" class="course-image">
+                                    <img src="{{ url_for('static',  filename='images/course/5.jpg') }}" alt="#" title="course-4" width="400" height="250">
+                                </a>
+                                <a class="course-readmore" href="#">Read More</a>
+                            </div>
+                        </div>
+                        <div class="course-content">
+                            <div class="course-author">
+                                <img alt="#" src="{{ url_for('static',  filename='images/course/8.jpg') }}" class="avatar" height="40" width="40">
+                                <div class="author-contain">
+                                    <div class="course-value" itemprop="name">
+                                        <a href="#"> Keny White </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <h4 class="course-title">
+                                <a href="#" rel="bookmark">Introduction LearnPress – LMS plugin</a>
+                            </h4>
+                            <div class="course-color-set">
+                                <span></span>
+                            </div>
+                            <div class="course-meta">
+                                <div class="course-students">
+                                    <!-- <label>Students</label> -->
+                                    <div class="course-value">
+                                        <i class="fa fa-group"></i>
+                                        637
+                                    </div>
+                                    <div class="course-comments-count">
+                                        <div class="course-value">
+                                            <i class="fa fa-comment"></i>
+                                            3
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="course-price">
+                                    <div class="course-value free-course"> Free</div>
+                                    <meta itemprop="priceCurrency" content="$">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block sidebar %}
+     <div id="sidebar" class="sidebar">
+        <div class="squish-container">
+            <h3>درس های جدید</h3>
+            <nav class="sidebar-category">
+                <ul>
+                    <li><a href="#">backend</a></li>
+                    <li><a href="#">frontend</a></li>
+                    <li><a href="#">photography</a></li>
+                    <li><a href="#">css</a></li>
+                </ul>
+            </nav><!-- .example-menu -->
+        </div>
+        <div class="squish-container">
+            <h3>آرشیو سال ها</h3>
+            <nav class="sidebar-category">
+                <ul>
+                    <li><a href="#">2017</a></li>
+                    <li><a href="#">2016</a></li>
+                    <li><a href="#">2015</a></li>
+                    <li><a href="#">2014</a></li>
+                </ul>
+            </nav><!-- .example-menu -->
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block sidebar_switcher %}
+{#    <div class="sidebar-switcher">#}
+{#            <div id="sidebar-switcher" class="icon-switcher"><i class="fa fa-exchange"></i></div></a>#}
+{#    </div>#}
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+        <title>پایلاگ</title>
+
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="main.js"></script>
+    </head>
+    <body>
+        <div class="outer-wrap">
+            <header>
+                <div class="toolbar">
+                    <div class="toolbar-info">
+                        <ul>
+                            <li>سوال داری؟</li>
+                            <li>
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                <span>(98) 9012833466</span>
+                            </li>
+                            <li>
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                <span>+nejati.farshad93@gmail.com</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="login-toolbar">
+                        <ul>
+                            <li><a href="#">ثبت نام</a></li>
+                            <li><a href="#">ورود</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="navigation">
+                    <div class="main-menu">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <div class="button-text">خانه</div>
+                                    <!-- <div class="icon">
+                                        <i class="fa fa-home"></i>
+                                    </div> -->
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="button-text">اخبار</div>
+                                    <!-- <div class="icon">
+                                        <i class="fa fa-newspaper-o"></i>
+                                    </div> -->
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="button-text">درباره ما</div>
+                                    <!-- <div class="icon">
+                                        <i class="fa fa-info-circle"></i>
+                                    </div> -->
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="button-text">درباره ما</div>
+                                    <!-- <div class="icon">
+                                        <i class="fa fa-info-circle"></i>
+                                    </div> -->
+                                </a>
+                            </li>
+                            <!-- <li>
+                                <a href="#">
+                                    <div class="icon">
+                                        <i class="fa fa-file-text"></i>
+                                    </div>
+                                    <div class="button-text">تماس با ما</div>
+                                </a>
+                            </li> -->
+                            <!-- <li><a href="#"><div class="icon"><i class="fa fa-file-text"></i></div><div class="button-text"></div></a></li> -->
+                        </ul>
+                    </div>
+                    <div class="logo-nav">
+                        <div class="logo-icon">
+                            <a href="#">
+                                <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <div class="logo-text">
+                            <a href="#">پایلاگ</a>
+                        </div>  
+                            <!-- <ul>
+                                <li><a href="http://twitter.com"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                <li><a href="http://facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li><a href="http://linkedin.com"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                <li><a href="http://instagram.com"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                            </ul> -->
+                    </div>
+                </div>
+            </header>
+            <div class="main-content">
+                <div class="top-header">
+                    <span class="overlay-top-header"></span>
+                    <h1 class=" header-content">پایلاگ</h1>
+                </div>
+                <div class="site-content">
+
+
+                    <div id="sidebar" class="sidebar">
+                        <div class="squish-container">
+                            <h3>همه ی درس ها</h3>
+                            <nav class="sidebar-category">
+                                <ul>
+                                    <li><a href="#">backend</a></li>
+                                    <li><a href="#">frontend</a></li>
+                                    <li><a href="#">photography</a></li>
+                                    <li><a href="#">css</a></li>
+                                </ul>
+                            </nav><!-- .example-menu -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="footer">
+                <p>this is footer!</p>
+            </footer>
+        </div>
+    </body>
+</html>

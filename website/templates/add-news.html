@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+    <h1 class=" header-content">{{page_title}}</h1>
+{% endblock %}
+
+{% block site_content %}
+    <section class="posts">
+        <div class="login-panel">
+            <div class="login">
+                <h2>خبر جدید</h2>
+                <form class="registration add_news" method="post" action="add-news">
+
+{#                    <p><label for="user_id">شناسه ی کاربر</label>#}
+{#                        <input placeholder="شناسه کاربری را وارد کنید" type="text" name="user_id" id="user_id" class="input">#}
+{#                    </p>#}
+                    <p>
+                        <label for="post_title">عنوان</label>
+                        <input placeholder="عنوان خبر را وارد کنید" type="text" name="post_title" id="post_title" class="input">
+                    </p>
+                    <p>
+                        <label for="post_categories">دسته بندی</label>
+                        <select>
+                            {% for category in categories %}
+                                <option class="input">{{ category[0] }}</option>
+                            {% endfor %}
+                        </select>
+                        <input placeholder="دسته بندی" type="text" name="post_categories" id="post_categories" class="input">
+                    </p>
+                    <div class="image-panel">
+                        <label for="post-image">تصویر</label>
+                        <div class="upload-image">
+                            <input type="file" name="post_image" id="post-image" class="">
+                            <label for="post-image">آپلود</label>
+                        </div>
+                    </div>
+                    <p>
+                        <label for="post-content">محتوا</label>
+                        <textarea name="post_content"  id="post-content" class="post-content" > </textarea>
+                    </p>
+                    <p class="submit">
+                        <input type="submit" name="submit" id="submit" class="submit-button" value="ثبت">
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+
+{% block sidebar %}
+
+    <div id="sidebar" class="sidebar">
+        <div id="search" class="widget_search">
+            <h3 class="search-widget-title">جستجو</h3>
+            <form role="search" method="get" class="search-form" action="#">
+                <label>
+                    <input type="search" class="search-field" placeholder="جستجو ..." value="" name="s">
+                </label>
+                <input type="submit" class="search-submit" value="">
+            </form>
+        </div>
+        <div class="squish-container">
+            <h3>دسته بندی ها</h3>
+            <nav class="sidebar-category">
+                <ul>
+
+                    {% for category in categories %}
+                    <li><a href={{ url_for('category', category_name=category[0]) }}>{{ category[0] }}</a></li>
+                    {% endfor %}
+                </ul>
+            </nav><!-- .example-menu -->
+        </div>
+    </div>
+{% endblock %}
+
+{% block sidebar_switcher %}
+    <div class="sidebar-switcher">
+            <div id="sidebar-switcher" class="icon-switcher"><i class="fa fa-exchange"></i></div></a>
+    </div>
+{% endblock %}
